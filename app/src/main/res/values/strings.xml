@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Eventool</string>
+    <string name="Listar_usuarioActivity">Listar_usuario</string>
+    <string name="title_activity_lista_usuario">Listar_usuarioActivity</string>
+</resources>
