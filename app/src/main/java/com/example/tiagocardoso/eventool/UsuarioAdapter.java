@@ -34,14 +34,14 @@ public class UsuarioAdapter extends ArrayAdapter<Usuario> {
         Usuario usuario = usuarios.get(posicao);
 
         if(usuario != null){
-            TextView textID = (TextView) localView.findViewById(R.id.textID);
+            //TextView textID = (TextView) localView.findViewById(R.id.textID);
             TextView textNome = (TextView) localView.findViewById(R.id.textNome);
             TextView textSobrenome = (TextView) localView.findViewById(R.id.textSobrenome);
             TextView textTelefone = (TextView) localView.findViewById(R.id.textTelefone);
 
-            if(textID != null){
+            /*if(textID != null){
                 textID.setText(String.valueOf(usuario.getID()));
-            }
+            }*/
             if(textNome != null){
                 textNome.setText(usuario.getNome());
             }

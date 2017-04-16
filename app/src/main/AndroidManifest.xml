@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.tiagocardoso.eventool">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -18,8 +18,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".Criar_usuarioActivity" />
+        <activity android:name=".Criar_usuarioActivity" />
         <activity
             android:name=".Listar_usuarioActivity"
             android:label="@string/app_name"
@@ -29,8 +28,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.tiagocardoso.eventool.Criar_usuarioActivity" />
         </activity>
-
-
+        <activity android:name=".Listar_EventoActivity" />
+        <activity android:name=".Listar_evento2Activity"></activity>
     </application>
 
 </manifest>

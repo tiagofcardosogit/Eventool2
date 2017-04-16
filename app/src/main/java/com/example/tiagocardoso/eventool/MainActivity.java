@@ -21,6 +21,8 @@ public class MainActivity extends Activity {
             case R.id.btnListar:
                 intent = new Intent(this,Listar_usuarioActivity.class);
                 break;
+            case R.id.btnListarEvento:
+                intent = new Intent(this,Listar_evento2Activity.class);
         }
         if(intent != null){
             startActivity(intent);

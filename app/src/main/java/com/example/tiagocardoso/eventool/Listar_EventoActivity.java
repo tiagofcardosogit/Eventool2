@@ -1,5 +1,6 @@
 package com.example.tiagocardoso.eventool;
 
+import android.app.Activity;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -26,17 +27,17 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.List;
 
-public class Listar_usuarioActivity extends AppCompatActivity {
+public class Listar_EventoActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lista_usuario);
+        setContentView(R.layout.activity_listar_evento2);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarEvt);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.actionBtn);
+/*        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.actionBtn);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -45,12 +46,12 @@ public class Listar_usuarioActivity extends AppCompatActivity {
 
 
             }
-        });
+        });*/
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        loadUsuarios();
+        loadEventos();
     }
 
-    public void loadUsuarios(){
+    public void loadEventos() {
         new DownloadFromMyAPI().execute();
     }
 
@@ -79,7 +80,7 @@ public class Listar_usuarioActivity extends AppCompatActivity {
             } catch (Exception e) {
                 Log.e("Error", "Error ", e);
                 return null;
-            } finally{
+            } finally {
                 if (urlConnection != null) {
                     urlConnection.disconnect();
                 }
@@ -89,14 +90,13 @@ public class Listar_usuarioActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
-            List<Usuario> usuarios = Util.convertJSONtoUsuario(s);
-            if(usuarios != null){
-                ArrayAdapter<Usuario> usuarioAdapter = new UsuarioAdapter(Listar_usuarioActivity.this,R.layout.usuario_item,usuarios);
-                ListView listaUsuario = (ListView) findViewById(R.id.listUsuarios);
-                listaUsuario.setAdapter(usuarioAdapter);
+            List<Evento> eventos = Util.convertJSONtoEvento(s);
+            if (eventos != null) {
+                ArrayAdapter<Evento> eventoAdapter = new EventoAdapter(Listar_EventoActivity.this, R.layout.evento_item, eventos);
+                ListView listaEvento = (ListView) findViewById(R.id.listEventos);
+                listaEvento.setAdapter(eventoAdapter);
             }
         }
     }
 
 }
-
