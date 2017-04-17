@@ -27,6 +27,7 @@ public class Listar_evento2Activity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         loadEventos();*/
 
+loadEventos();
 
     }
 

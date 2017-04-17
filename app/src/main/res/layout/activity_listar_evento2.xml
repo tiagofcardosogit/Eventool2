@@ -21,7 +21,7 @@
 
     <include android:layout_height="200dp"
              android:layout_width="wrap_content"
-             layout="@layout/content_lista_usuario"
+             layout="@layout/content_lista_evento"
         android:layout_above="@+id/btnMyEvent"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="28dp" />
