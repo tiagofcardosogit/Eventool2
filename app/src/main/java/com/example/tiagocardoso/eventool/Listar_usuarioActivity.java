@@ -60,7 +60,7 @@ public class Listar_usuarioActivity extends AppCompatActivity {
         protected String doInBackground(Void... params) {
             HttpURLConnection urlConnection = null;
             try {
-                URL url = new URL("http://eventool.esy.es/selectEvento.php");
+                URL url = new URL("http://eventool.esy.es/selectAll.php");
                 urlConnection = (HttpURLConnection) url.openConnection();
                 urlConnection.setReadTimeout(10000);
                 urlConnection.setConnectTimeout(15000);
